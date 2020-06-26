@@ -1,55 +1,84 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-@media screen and (min-width:600px){
+@media only screen and (min-width:600px) {
     nav { float: left; width: 25%;}
     section {margin-left: 25%;}
+    .content> .a{
+        order: 1;
+        
+     } 
+     .content> .c{
+         order: 2;
+         
+      } 
+      .content> .b{
+         order: 3;
+         
+      } 
+     
+    
 }
 .container{
     border: 1px solid white;
     display: grid;
     grid-template-columns: 80px,100px,80px;
     text-align: center;
-    grid-template-areas: "a a a " "b b b " "c c c  " "d d d ";
+    grid-template-areas: "a a a " "b b b " "c c c  " ;
 }
 .header {
     grid-area: a;
-    /* grid-column: 1/4; 
-    display: inline; */
+     
      background-color: lightskyblue;
     color: black;
-    text-align: center;
-    height: 40px; 
+    justify-content: center;
+    height: 30px; 
 }
-div{
-    grid-area: b;
+.menu,div{
+    /* grid-area: b; */
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    color: white;
+    flex-wrap: wrap; 
+     color: white;
      border: 2px solid white; 
      background-color: darkslategrey;
      margin: 0px; 
 }
- .a {
-     grid-area: c;
-     /* grid-column: 2/span 3; */
-    border: 1px solid gray;
-    background-color: gray;
-    width: 200px;
-    height: 200px;  
-    display:grid;
-
-} 
-
+      .content> .a{
+        order: 1;
+        display:grid; 
+         flex-direction: column;
+        background-color: gray;
+        width: 200px;
+        height: 200px;  
+       
+    } 
+    .content >.b{
+        order: 2;
+        display:grid; 
+         flex-direction: column;
+        background-color: gray;
+        width: 200px;
+        height: 200px;  
+       
+    } 
+    .content >.c{
+        order: 3;
+        display:grid; 
+         flex-direction: column;
+        background-color: gray;
+        width: 200px;
+        height: 200px;  
+       
+    }
+ 
 .footer{
     grid-area: d;
-    /* grid-column: 1/4; */
     background-color: darkslategrey;
     color: white;
-    text-align: center;
-    height: 40;
+    justify-content: center;
+   
 } 
 
 

@@ -100,22 +100,18 @@ console.log("Expected output of maxOfThree(55,4,44) is 55  " + myFunctionTest(4,
 // <!-- 7. Write a function filterLongWords() that takes an array of words and an integer i 
     // and returns a new array containing only those words that were longer than i characters. -->
 
-    function filterLongWords(arrayOfWords, i) {
-        let arr = [];
-        if(arrayOfWords == null) {
-            return null;
-        }
-        if(arrayOfWords.length == 0){
-            return arr;
-        }
-        arrayOfWords.forEach(function (str) {
-            if (i <= str.length) {
-                arr.push(str.substring(i));
-            }
+    
+    let filterLongWords = function(array, i){
+        var newArray = [];
+        array.forEach(function(element){
+        if(element.length>i){
+        newArray.push(element)
+        };
         });
-        return arr;
-    }
-    console.log("Expectid output of findLongestWords(ratset gaj) is set  "  + myFunctionTest("set", filterLongWords(["ratset" , "gaj"], 3)));  
+        return newArray;
+        }
+     console.log("Expectid output of findLongestWords(ratset gaj) is set  "  + 
+     myFunctionTest(JSON.stringify(["ratset"]),JSON.stringify(filterLongWords(["ratset" , "gaj"], 3))));  
    
 // <!-- 8.Modify the jsfiddle on the map/filter/reduce slide as follows:
 // a) multiply each element by 10; 
@@ -126,13 +122,13 @@ console.log("Expected output of maxOfThree(55,4,44) is 55  " + myFunctionTest(4,
     const b = a.map(function(elem, i, array) {
     return elem * 10;
 })
-console.log("Expectid output of map([1,3,5,3.3]) is 10,30,50,30,30  "  + myFunctionTest([10,30,50,30,30], (b)));
+console.log("Expectid output of map([1,3,5,3.3]) is 10,30,50,30,30  "  + myFunctionTest(JSON.stringify([10,30,50,30,30]), JSON.stringify((b))));
 
 const c = a.filter(function(elem, i, array){
   return elem !== 3;});
 
   
-  console.log("Expectid output of filter([1,3,5,3.3]) is 1,5 "  + myFunctionTest([1,5], (c)));
+  console.log("Expectid output of filter([1,3,5,3.3]) is 1,5 "  + myFunctionTest(JSON.stringify([1,5]), JSON.stringify((c))));
 const d = a.reduce(function(prevValue, elem, i, array){
   return prevValue * elem;
 });

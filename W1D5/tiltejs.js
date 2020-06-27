@@ -115,7 +115,7 @@ console.log("Expected output of maxOfThree(55,4,44) is 55  " + myFunctionTest(4,
         });
         return arr;
     }
-    console.log("Expectid output of findLongestWord(ratset gaj) is set  "  + myFunctionTest("set", filterLongWords(["ratset", "gaj"],3) ));  
+    console.log("Expectid output of findLongestWords(ratset gaj) is set  "  + myFunctionTest("set", filterLongWords(["ratset" , "gaj"], 3)));  
    
 // <!-- 8.Modify the jsfiddle on the map/filter/reduce slide as follows:
 // a) multiply each element by 10; 

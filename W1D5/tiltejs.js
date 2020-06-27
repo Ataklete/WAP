@@ -126,7 +126,7 @@ console.log("Expected output of maxOfThree(55,4,44) is 55  " + myFunctionTest(4,
     const b = a.map(function(elem, i, array) {
     return elem * 10;
 })
-console.log("Expectid output of map([10,30,50,30.3]) is 10,30,50,30,30  "  + myFunctionTest([10,30,50,30,30], (b)));
+console.log("Expectid output of map([1,3,5,3.3]) is 10,30,50,30,30  "  + myFunctionTest([10,30,50,30,30], (b)));
 
 const c = a.filter(function(elem, i, array){
   return elem !== 3;});

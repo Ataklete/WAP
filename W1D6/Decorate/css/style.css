@@ -1,0 +1,35 @@
+/**
+* style.css
+*/
+body {
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+#validation {
+    float: right;
+    margin: 50px 0 10px 5px;
+}
+
+#container {
+    width: 1000px;
+    margin: auto;
+    background-color: rgb(216, 194, 157);
+    font-family: "Arial", "Helvetica", sans-serif;
+    font-size: 12pt;
+}
+
+.bigger {
+    font-size: 4em;
+}
+
+.bold {
+    font-weight: bold;
+    color: green;
+    text-decoration: underline;
+}
+
+.normalText {
+    font-weight: normal;
+    color: rgb(235, 12, 12);
+    text-decoration: none;
+}

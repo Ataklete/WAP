@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Text Decorator</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet" />    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>   
+
+</head>
+
+<body>
+    <div id="container">
+        <h1>Text Decorator</h1>
+
+        <div>
+            <img src="images/decorated.gif" alt="very decorated!" />
+        </div>
+
+        <!-- Your UI controls go here -->
+
+        <fieldset>
+            <legend>Text </legend>
+            <textarea  name="orginalText" id="orginalText"> some text here </textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Decoration </legend>
+            <button id="docBig" name="docBig">Decoration</button> <br>
+            <input type="checkbox" id="bling" name="bling">
+            <label for="bling">Bling </label>
+        </fieldset>
+    </div>
+    <div id="validation">
+        <a href="https://validator.w3.org/check/referer"> <img src="images/w3c-html.png" alt="html validator" /></a>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer"> <img src="images/w3c-css.png" alt="CSS validator" /></a>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

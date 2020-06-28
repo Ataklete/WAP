@@ -6,17 +6,17 @@ window.onload = function() {
 
     "use strict";
 
-    var bigBtn = document.getElementById("docBig");
+    let bigBtn = document.getElementById("docBig");
     // using anonmous function
     bigBtn.onclick = function() {  
         setInterval(docorateBig, 200);
     };
 
     function docorateBig() {
-        var textArea = document.getElementById("orginalText");
-        var style = window.getComputedStyle(textArea);
-        var fontSize = style.getPropertyValue('font-size');
-        var fontBigger = parseInt(fontSize) + 2; //update the font periodically 
+        let textArea = document.getElementById("orginalText");
+        let style = window.getComputedStyle(textArea);
+        let fontSize = style.getPropertyValue('font-size');
+        let fontBigger = parseInt(fontSize) + 2; //update the font periodically 
         document.getElementById("orginalText").style.fontSize = fontBigger.toString() + "px";
     }
 

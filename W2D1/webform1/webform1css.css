@@ -27,7 +27,7 @@
         width: 80%;
         padding: 30px;
         border-radius: 5px;
-        text-justify: auto;
+        /* text-justify: auto; */
     }
     button{
         padding: 10px;

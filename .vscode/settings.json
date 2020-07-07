@@ -1,6 +1,7 @@
 {
     "vscode-janus-debug.uploadOnSave": [
         "app",
-        "tiltejs"
+        "tiltejs",
+        "test"
     ]
 }

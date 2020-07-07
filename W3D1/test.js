@@ -86,10 +86,20 @@ describe("bank", function() {
         const accountNumber = bank.addAccount(account);
         assert.equal(1, accountNumber);
     });
-    it("check account number for a new account", function() {
+    it("check account number for a new saving account", function() {
         const accountNumber = bank.addSavingsAccount(account);
-        assert.equal(1, accountNumber);
+        assert.equal(2, accountNumber);
     });
-
+    it("check account number for a new checking account", function() {
+        const accountNumber = bank.addCheckingAccount(account);
+        assert.equal(3, accountNumber);
+    });
+    it("returns the account in the correct string for printing", function() {
+        assert.equal("Account 0: balance 0\nAccount 1: balance 0\nAccount 2: balance 0\nAccount 3: balance 0\n", bank.toString());
+    });
+    it("check account number for end of Month", function() {
+        const accountNumber = bank.endOfMonth(account);
+        assert.equal("", accountNumber);
+    });
 
 });

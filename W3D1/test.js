@@ -86,5 +86,10 @@ describe("bank", function() {
         const accountNumber = bank.addAccount(account);
         assert.equal(1, accountNumber);
     });
+    it("check account number for a new account", function() {
+        const accountNumber = bank.addSavingsAccount(account);
+        assert.equal(1, accountNumber);
+    });
+
 
 });

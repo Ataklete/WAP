@@ -1,0 +1,9 @@
+body{
+    background-color: gray;
+}
+
+ul {
+    border: 1px solid black;
+    border-radius: 5Px;
+    width: 25%;
+}

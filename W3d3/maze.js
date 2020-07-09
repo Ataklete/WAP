@@ -1,49 +1,35 @@
-(function () {
-    "use strict";
-var win = true;
+$(document).ready(function(){
 
-$('document').ready(function () {
-    $("#start").click(
-        function () {
-            $("#status").text("Good Luck.");
-            $("div .boundary").removeClass("youlose");
-            startGame();
+	var gameStart = false;
+	var lost = false;
 
-        });
+	function lose(){
+		if(!gameStart) return "";
+		lost = true;
+		$(".hoverError").css("background-color","#f44256");
+		$("#status").text("you lost, try again by click on 'S'");
+	}
+
+	$("#start").click(function(){
+		gameStart=true;
+		lost=false;
+		$(".hoverError").removeAttr("style");
+
+		$("#status").text("Game start");
+		$(".boundary").addClass("hoverError");
+	});
+
+	$(".boundary").hover( lose);
+	$("#maze").mouseleave(lose);
+
+	$("#end").hover(function(){
+
+		if (!gameStart || lost) return "";
+
+		$(".hoverError").css("background-color","#42f477");
+		$("#status").text("you Win :)");
+
+		gameStart=false;
+	})
+
 });
-
-function startGame() {
-    win = true;
-
-    $(".boundary").hover(
-        function () {
-            loose();
-        });
-
-    $("#end").click(
-        function () {
-            if (win) {
-                $("#status").text("You WIN! : Click S to Play Again");
-                endGame();
-            }
-        });
-
-    $("#maze").mouseleave(
-        function () {
-            loose();
-        });
-
-}
-
-function loose() {
-    win = false;
-    $("div .boundary").addClass("youlose");
-    $("#status").text("You LOSE! : Click 'S' to Retry ");
-}
-
-function endGame() {
-    $("div .boundary").removeClass("youlose");
-    $('.boundary').unbind('hover');
-    $("#maze").unbind('mouseleave');
-}
-})();

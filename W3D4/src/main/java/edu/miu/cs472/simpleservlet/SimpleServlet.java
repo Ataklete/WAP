@@ -20,6 +20,7 @@ public class SimpleServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         out.print("<html><head><title>Test</title></head><body>");
         out.print("<form method='post'>");
+
         out.print("<p>Please click the button</p>");
         out.print("<input type='submit' value='Click me'/>");
         out.print("</form>");
